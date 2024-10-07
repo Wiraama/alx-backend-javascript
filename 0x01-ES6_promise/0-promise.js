@@ -1,3 +1,5 @@
 export function getResponseFromAPI() {
-  return new Promise(() => {});
+  return new Promise((resolve, reject)=> {
+    resolve();
+  });
 }
