@@ -5,7 +5,10 @@ console.log("Welcome to Holberton School, what is your name?");
 // listedn to user input
 process.stdin.on('data', (data) => {
   const input = data.toString().trim();
-  console.log(`Your name is: ${input}`);
+
+  if (input) {
+    console.log(`Your name is: ${input}`);
+  }
   process.exit();
 });
 
