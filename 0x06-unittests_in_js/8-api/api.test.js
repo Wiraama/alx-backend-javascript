@@ -3,13 +3,13 @@ const chaiHttp = require('chai-http');
 const server = require('./api');
 
 const { expect } = chai;
-chai.use(chaihttp);
+chai.use(chaiHttp);
 
 describe('Index Page', () => {
   it('correct status code?', (done) => {
     chai.request(server)
       .get('/')
-      .end((err, res) = {
+      .end((err, res) => {
         expect(res).to.have.status(200);
         done();
       });
